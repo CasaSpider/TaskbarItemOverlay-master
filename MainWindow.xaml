@@ -19,10 +19,10 @@
 	</Window.Resources>
 	<Window.TaskbarItemInfo>
 		<TaskbarItemInfo 
-            src:TaskbarItemOverlay.Content="{Binding Count}" 
+            src:TaskbarItemOverlay.Content="{Binding Phase}" 
             src:TaskbarItemOverlay.Template="{StaticResource OverlayIcon}" />
 	</Window.TaskbarItemInfo>
 	<Viewbox>
-		<TextBlock Text="{Binding Count}" />
+		<TextBlock Text="{Binding Phase}" />
 	</Viewbox>
 </Window>
