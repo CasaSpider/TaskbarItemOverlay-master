@@ -80,27 +80,4 @@ namespace WpfApplication1
             StartTheProgram();
         }
     }
-
-    public class ViewModel : INotifyPropertyChanged
-    {
-        private string _phase;
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public string Phase
-        {
-            get { return _phase; }
-            set
-            {
-                if (_phase != value)
-                {
-                    _phase = value;
-                    var handler = PropertyChanged;
-                    if (handler != null)
-                    {
-                        handler(this, new PropertyChangedEventArgs("Phase"));
-                    }
-                }
-            }
-        }
-    }
 }
