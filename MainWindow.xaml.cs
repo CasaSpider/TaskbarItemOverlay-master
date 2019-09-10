@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Configuration;
 
 
 namespace WpfApplication1
@@ -16,41 +17,54 @@ namespace WpfApplication1
         public static List<string> PhaseList = new List<string>() { " ", "T", "A", "P" };
         public static string Phase = string.Empty;
 
-        public static string BaseDir = @"D:\Temp\etc";
-        public static string Program2Run = @"C:\Windows\System32\calc.exe";
+        public static string BaseDir = ConfigurationManager.AppSettings["BaseDir"];
+        public static string Program2Run = ConfigurationManager.AppSettings["Program2Run"];
 
         public MainWindow()
         {
-            InitializeComponent();
-
-            cbx_phase.ItemsSource = PhaseList;
-            cbx_phase.SelectedIndex = 0;
-
-            var viewModel = new ViewModel();
-            viewModel.Phase = cbx_phase.Text;
-            DataContext = viewModel;
-
-            Loaded += delegate
+            try
             {
-                var thread = new Thread(() =>
+                InitializeComponent();
+
+               
+
+        cbx_phase.ItemsSource = PhaseList;
+                cbx_phase.SelectedIndex = 0;
+
+                var viewModel = new ViewModel();
+                viewModel.Phase = cbx_phase.Text;
+                DataContext = viewModel;
+
+                Loaded += delegate
                 {
-                    while (true)
+                    var thread = new Thread(() =>
                     {
-                        viewModel.Phase = Phase;
+                        while (true)
+                        {
+                            viewModel.Phase = Phase;
+                        };
+                    })
+                    {
+                        IsBackground = true
                     };
-                })
-                {
-                    IsBackground = true
+                    thread.Start();
                 };
-                thread.Start();
-            };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
         }
 
         private void CopyTheFile()
         {
+            if (Phase == string.Empty)
+                Phase = "X";
             string from = $@"{BaseDir}\hosts_{Phase}";
             string to = $@"{BaseDir}\hosts";
             File.Copy(from, to, true);
+
         }
 
         private void StartTheProgram()
@@ -76,8 +90,15 @@ namespace WpfApplication1
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            CopyTheFile();
-            StartTheProgram();
+            try
+            {
+                CopyTheFile();
+                StartTheProgram();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
