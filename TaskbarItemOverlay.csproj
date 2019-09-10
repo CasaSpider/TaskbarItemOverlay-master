@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Fasticon-Easter-Rabbits-Pink-rabbit.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -92,6 +95,18 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icons8-Ios7-Transport-Yacht.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons8-Ios7-Transport-Yacht.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fasticon-Easter-Rabbits-Pink-rabbit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fasticon-Easter-Rabbits-Pink-rabbit.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
