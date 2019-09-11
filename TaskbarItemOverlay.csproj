@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icons8-Windows-8-Animals-Dolphin.ico</ApplicationIcon>
+    <ApplicationIcon>ArcGIS Pro.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -101,16 +101,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Fasticon-Easter-Rabbits-Pink-rabbit.ico" />
+    <Resource Include="ArcGIS Pro.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Fasticon-Easter-Rabbits-Pink-rabbit.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Icons8-Windows-8-Animals-Dolphin.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons8-Windows-8-Animals-Dolphin.ico" />
+    <Resource Include="Images\ArcGIS Pro.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
