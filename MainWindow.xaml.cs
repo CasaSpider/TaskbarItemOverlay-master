@@ -55,6 +55,7 @@ namespace WpfApplication1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
             }
         }
 
@@ -139,6 +140,7 @@ namespace WpfApplication1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
             }
         }
     }
