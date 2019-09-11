@@ -25,7 +25,7 @@
     <Viewbox>
         <Grid Height="53" Width="48">
             <ComboBox Name="cbx_phase" Margin="0,5,0,28" DropDownClosed="cbx_dropdownclosed" />
-            <Button x:Name="button" Content="Do it!" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" Width="48" Click="button_Click" />
+            <Button x:Name="button" Content="ArcGIS Pro" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" Width="48" Click="button_Click" FontSize="9" />
         </Grid>
     </Viewbox>
 </Window>

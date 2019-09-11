@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Fasticon-Easter-Rabbits-Pink-rabbit.ico</ApplicationIcon>
+    <ApplicationIcon>Icons8-Windows-8-Animals-Dolphin.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Logger.cs" />
     <Compile Include="TaskbarItemOverlay.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="MainWindow.xaml">
@@ -100,16 +101,16 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Icons8-Ios7-Transport-Yacht.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons8-Ios7-Transport-Yacht.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Fasticon-Easter-Rabbits-Pink-rabbit.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Fasticon-Easter-Rabbits-Pink-rabbit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icons8-Windows-8-Animals-Dolphin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons8-Windows-8-Animals-Dolphin.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

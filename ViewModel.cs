@@ -19,11 +19,7 @@ namespace WpfApplication1
                 if (_phase != value)
                 {
                     _phase = value;
-                    var handler = PropertyChanged;
-                    if (handler != null)
-                    {
-                        handler(this, new PropertyChangedEventArgs("Phase"));
-                    }
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Phase"));
                 }
             }
         }
